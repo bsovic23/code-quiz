@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Quiz</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body>
+    <!--Intro Welcome Box-->
+    <header>
+        <h1>Welcome to the code quiz</h1>
+        <p>INSTRUCTIONS HERE</p>
+
+        <button type="submit" id="start-quiz">START QUIZ</button>
+    </header>
+    
+    <section class="question-box" id="question-box">
+        <h2 class="question-title" id="question-title"></h2>
+
+        <ul class="answers" id="answers">
+            <button type="submit" id="answer1">
+                <p id="AnswerOneText"></p>
+            </button>
+            <button type="submit" id="answer2">
+                <p id="AnswerTwoText"></p>
+            </button>
+            <button type="submit" id="answer3">
+                <p id="AnswerThreeText"></p>
+            </button>
+            <button type="submit" id="answer4">
+                <p id="AnswerFourText"></p>
+            </button>
+        </ul>
+    </section>
+
+    <button type="submit" id="nextQuestion">NEXT QUESTION</button>
+
+    <section class="end-box" id="end-box">
+
+        <label for="player-name">Enter your name here:</label>
+        <input type="text" name="player-name" id="player-name" placeholder="name" />
+        
+    </section>
+
+    <section class="high-scores" id="high-scores">
+        <h3>High Scores:</h3>
+    </section>
+
+    <script src="./assets/js/index.js"></script>
+</body>
+</html>
