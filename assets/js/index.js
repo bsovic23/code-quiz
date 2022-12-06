@@ -1,8 +1,9 @@
-// Code Quiz
+// Code Quiz Variables
 questionTracker = 0;
 choice = 0;
 answerTracker = [];
 timeTracker = [];
+finalScore = 0;
 
 // Elements
 questionBox = document.querySelector("#question-box");
@@ -19,11 +20,14 @@ answerThreeEl = document.querySelector("#answerThreeText");
 answerFourEl = document.querySelector("#answerFourText");
 answerFiveEl = document.querySelector("#answerFiveText");
 
-// Button
+// Buttons
 startBtn = document.querySelector("#start-quiz");
-
-// Button Functions
 startBtn.addEventListener("click", startQuiz);
+
+highScoreBtn = document.querySelector("#high-score-btn");
+
+playerNameBtn = document.querySelector("#player-name-btn");
+playerNameBtn.addEventListener("click", addScore);
 
 // Questions Object
 var quizFull = [
@@ -64,7 +68,7 @@ var quizFull = [
     },
 ];
 
-console.log(quizFull);
+var quizAnswers = [1, 2, 2, 3, 4];
 
 // Initital Question Start Function
 function startQuiz() {
@@ -102,7 +106,7 @@ function nextQuestion() {
 
     else {
         window.alert("the quiz is now over. Please enter your name to be added to the high scores list");
-        console.log(answerTracker);
+        scoreQuiz();
     } 
 };
 
@@ -115,25 +119,21 @@ answerFourBtnEl.addEventListener("click", answerFour);
 // Determining which button clicked
 function answerOne() {
     choice = 1;
-
     answerClicked();
 };
 
 function answerTwo() {
     choice = 2;
-
     answerClicked();
 };
 
 function answerThree() {
     choice = 3;
-
     answerClicked();
 };
 
 function answerFour() {
     choice = 4;
-
     answerClicked();
 };
 
@@ -151,6 +151,39 @@ function answerClicked() {
     choice = 0;
 
     nextQuestion();
+};
+
+// Scoring the quiz
+function scoreQuiz() {
+    console.log(answerTracker);
+    
+    for (i = 0; i < 5; i++ ) {
+        if (answerTracker[i][1] === quizAnswers[i]) {
+            finalScore+=1;
+            // MANIPULATE DOM HERE FOR CORRECT ANSWER
+        } else finalScore == finalScore;
+            // MANIPULATE DOM HERE FOR INCORRECT ANSWER
+    };
+
+    console.log(finalScore);
+};
+
+// Add Name to Score and add to the high score list
+function addScore() {
+    var playerNameEl = document.querySelector("#player-name");
+    var playerName = playerNameEl.value.trim();
+    
+    answerTracker.unshift(["player-name:", playerName]);
+
+    console.log(answerTracker);
+
+    submitScore(answerTracker);
+};
+
+// Submitting the score to the high score list
+function submitScore(answerTracker) {
+    console.log("this function works")
+    console.log(answerTracker);
 };
 
 // When Question runs out or timer is up below pops up
