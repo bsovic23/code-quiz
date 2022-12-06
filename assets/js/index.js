@@ -1,5 +1,6 @@
 // Code Quiz
 questionTracker = 0;
+choice = 0;
 answerTracker = [];
 timeTracker = [];
 
@@ -95,27 +96,59 @@ function nextQuestion() {
     answerThreeBtnEl.appendChild(p3El);
     answerFourBtnEl.appendChild(p4El);
 
+    // questionTracker variable
     questionTracker++;
     }
 
     else {
         window.alert("the quiz is now over. Please enter your name to be added to the high scores list");
+        console.log(answerTracker);
     } 
 };
 
 // Button control
-answerOneBtnEl.addEventListener("click", answerClicked);
-answerTwoBtnEl.addEventListener("click", answerClicked);
-answerThreeBtnEl.addEventListener("click", answerClicked);
-answerFourBtnEl.addEventListener("click", answerClicked);
+answerOneBtnEl.addEventListener("click", answerOne);
+answerTwoBtnEl.addEventListener("click", answerTwo);
+answerThreeBtnEl.addEventListener("click", answerThree);
+answerFourBtnEl.addEventListener("click", answerFour);
+
+// Determining which button clicked
+function answerOne() {
+    choice = 1;
+
+    answerClicked();
+};
+
+function answerTwo() {
+    choice = 2;
+
+    answerClicked();
+};
+
+function answerThree() {
+    choice = 3;
+
+    answerClicked();
+};
+
+function answerFour() {
+    choice = 4;
+
+    answerClicked();
+};
 
 // Create a function that stores the answer and clears the buttons
 function answerClicked() {
+
+    answerTracker.push([questionTracker, choice]);    
+
     titleEl.textContent = "";
     p1El.textContent = "";
     p2El.textContent = "";
     p3El.textContent = "";
     p4El.textContent = "";
+
+    choice = 0;
 
     nextQuestion();
 };
@@ -123,6 +156,6 @@ function answerClicked() {
 // When Question runs out or timer is up below pops up
 
 
-// Local Storage
+// Local Storage 
 
 
