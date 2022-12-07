@@ -156,16 +156,25 @@ function answerClicked() {
 // Scoring the quiz
 function scoreQuiz() {
     console.log(answerTracker);
+
+    answerResultEl = document.querySelector("#answerResult");
     
     for (i = 0; i < 5; i++ ) {
         if (answerTracker[i][1] === quizAnswers[i]) {
             finalScore+=1;
-            // MANIPULATE DOM HERE FOR CORRECT ANSWER
-        } else finalScore == finalScore;
-            // MANIPULATE DOM HERE FOR INCORRECT ANSWER
+            answerLi = document.createElement('li');
+            answerLi.textContent = "Question" + [i+1] + " is CORRECT!";
+            answerResultEl.appendChild(answerLi);
+        } else {
+            finalScore == finalScore;
+            answerLi = document.createElement('li');
+            answerLi.textContent = "Question" + [i+1] + " is WRONG!";
+            answerResultEl.appendChild(answerLi);
+        }
     };
 
-    console.log(finalScore);
+    scoreEl = document.querySelector("#score");
+    scoreEl.textContent = finalScore;
 };
 
 // Add Name to Score and add to the high score list

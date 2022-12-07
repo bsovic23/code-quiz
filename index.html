@@ -22,7 +22,7 @@
 
             If you answer questions wrong, you will also lose time.<br><br>
 
-            THe quiz is over when you have finished all the questions, or run
+            The quiz is over when you have finished all the questions, or run
             out of time.<br><br>
 
             Good luck!
@@ -31,6 +31,7 @@
         <button type="submit" id="start-quiz">START QUIZ</button>
     </header>
     
+    <!--Question Box-->
     <section class="question-box" id="question-box">
         <h2 class="question-title" id="question-title">QUESTION TITLE HERE</h2>
 
@@ -50,15 +51,12 @@
         </ul>
     </section>
 
+    <!--Scoring Box-->
     <section class="end-box" id="end-box">  
-        <h3>Score: <p></p></h3>
+        <h3>Score:<p id="score"></p></h3>
         <h4>Answers:</h4>
-        <div>
-            <li>Q1</li>
-            <li>Q2</li>
-            <li>Q3</li>
-            <li>Q4</li>
-            <li>Q5</li>
+        <div id="answerResult">
+
         </div>
 
         <label for="player-name">Enter your name here:</label>
@@ -71,6 +69,7 @@
 
     </section>
 
+    <!--High Score Box-->
     <section class="high-scores" id="high-scores">
         <h3>Click the button below to view the high scores</h3>
         <button type="submit" id="high-score-btn">
