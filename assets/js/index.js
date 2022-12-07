@@ -195,7 +195,7 @@ function submitScore(answerTracker) {
     console.log(answerTracker);
 };
 
-// When Question runs out or timer is up below pops up
+// Timer
 
 
 // Local Storage 
