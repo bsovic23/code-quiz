@@ -1,16 +1,40 @@
 /* Root */
+:root{
+    --box-background-color: lightblue;
+}
 
 
+/* body */
+body {
+    background-color: lightgray;
+}
 
 /* Intro Welcome Box Section */
 header h1 {
     font-size: 36px;
     color: blue;
+    text-align: center;
 }
 
+header p {
+    background-color: var(--box-background-color);
+    padding: 10px;
+}
+
+#start-quiz{
+    border: black 3px solid;
+}
+
+#start-quiz:hover {
+    border: yellow 3px solid;
+}
 
 /* Question Box Section */
 
+.question-box {
+    background-color: var(--box-background-color);
+    padding: 10px;
+}
 
 /* Scoring Box Section */
 
