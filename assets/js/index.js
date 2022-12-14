@@ -206,15 +206,54 @@ function submitScore(scoreSubmit) {
 // See Scores List Button -> Grabbing the scores from local storage and creating a list
 
 function seeAllScores() {
+
+    const $highScoreList = document.querySelector("#high-score-list");
+
+    $highScoreList.innerHTML = "";
+
     for (i = 0; i < scoresArray.length; i++) {
-        console.log(scoresArray[i]);
+        const nameEl = scoresArray[i][0];
+        const scoreEl = scoresArray[i][1];
+
+        const highScoreEl =
+        `
+        <div>
+            <h2>Player Name: ${nameEl}</h2>
+            <p>Player Score: ${scoreEl}</p>
+        </div>
+        `
+
+        $highScoreList.innerHTML += highScoreEl;
     };
 };
 
 
-
-
 // Timer
+var time = 60;
+
+const $timeEl = document.querySelector("#timer");
+
+function countdown() {
+    var time = 60;
+  
+    var timeInterval = setInterval(function () {
+      if (time > 1) {
+        $timeEl.innerHTML = time;
+        time--;
+      } 
+      else if (time === 1) {
+        $timeEl.innerHTML = time;
+        time--;
+      }
+      else {
+        $timeEl.innerHTML = '';
+        clearInterval(timeInterval);
+        displayMessage();
+      }
+    }, 1000);
+  };
+
+countdown();
 
 
 // Immediately Grab Local Storage Scores
