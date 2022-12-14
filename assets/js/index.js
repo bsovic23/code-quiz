@@ -182,22 +182,34 @@ function addScore() {
     var playerNameEl = document.querySelector("#player-name");
     var playerName = playerNameEl.value.trim();
     
-    answerTracker.unshift(["player-name:", playerName]);
+    scoreSubmit = [playerName, finalScore];
 
-    console.log(answerTracker);
-
-    submitScore(answerTracker);
+    submitScore(scoreSubmit);
 };
 
 // Submitting the score to the high score list
-function submitScore(answerTracker) {
-    console.log("this function works")
-    console.log(answerTracker);
+function submitScore(scoreSubmit) {
+
+    console.log(scoreSubmit);
+
+    /*
+    const allHighScores = JSON.parse(localStorage.getItem('highscores'));
+
+    answerTracker.push(allHighScores);
+
+    JSON.stringify(allHighScores);
+
+    localStorage.setItem('highscores', allHighScores);
+    */
 };
 
 // Timer
 
 
 // Local Storage 
+
+
+
+// Function that ranks the scores from high to low
 
 
