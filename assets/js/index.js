@@ -25,6 +25,7 @@ startBtn = document.querySelector("#start-quiz");
 startBtn.addEventListener("click", startQuiz);
 
 highScoreBtn = document.querySelector("#high-score-btn");
+highScoreBtn.addEventListener("click", seeAllScores);
 
 playerNameBtn = document.querySelector("#player-name-btn");
 playerNameBtn.addEventListener("click", addScore);
@@ -192,22 +193,38 @@ function submitScore(scoreSubmit) {
 
     console.log(scoreSubmit);
 
-    /*
-    const allHighScores = JSON.parse(localStorage.getItem('highscores'));
+    if (!scoresArray) {
+        scoresArray = [];
+        scoresArray.push(scoreSubmit);
+    } else {
+        scoresArray.push(scoreSubmit);
+    };
 
-    answerTracker.push(allHighScores);
-
-    JSON.stringify(allHighScores);
-
-    localStorage.setItem('highscores', allHighScores);
-    */
+    localStorage.setItem("scores", JSON.stringify(scoresArray));
 };
+
+// See Scores List Button -> Grabbing the scores from local storage and creating a list
+
+function seeAllScores() {
+    for (i = 0; i < scoresArray.length; i++) {
+        console.log(scoresArray[i]);
+    };
+};
+
+
+
 
 // Timer
 
 
-// Local Storage 
+// Immediately Grab Local Storage Scores
+function getScores() {
+    var storedScores = localStorage.getItem("scores");
+    scoresArray = JSON.parse(storedScores);
+    console.log(scoresArray);
+};
 
+getScores();
 
 
 // Function that ranks the scores from high to low
