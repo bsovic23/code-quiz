@@ -33,39 +33,39 @@ playerNameBtn.addEventListener("click", addScore);
 // Questions Object
 var quizFull = [
     questionOne = {
-        question: "question1",
-        choiceOne: "choice1-1",
-        choiceTwo: "choice2",
-        choiceThree: "choice3",
-        choiceFour: "choice4"
+        question: "The symbols ->   [ ]   in JavaScipt are used to create a(n):",
+        choiceOne: "Array",
+        choiceTwo: "Object",
+        choiceThree: "Variable",
+        choiceFour: "Function"
     },
     questionTwo = {
-        question: "question2",
-        choiceOne: "choice1",
-        choiceTwo: "choice2-2",
-        choiceThree: "choice3",
-        choiceFour: "choice4"
+        question: "How do you link your JS file in your HTML document",
+        choiceOne: "<link></link>",
+        choiceTwo: "<script></script>",
+        choiceThree: "relsheet",
+        choiceFour: "require('<sheetname>')"
     },
     questionThree = {
-        question: "question3",
-        choiceOne: "choice1",
-        choiceTwo: "choice2",
-        choiceThree: "choice3-3",
-        choiceFour: "choice4"
+        question: "Which is not a type of JavaScript Variable Syntax used",
+        choiceOne: "Var <var>",
+        choiceTwo: "Item <var>",
+        choiceThree: "Const <var>",
+        choiceFour: "Let <var>"
     },
     questionFour = {
-        question: "question4",
-        choiceOne: "choice1",
-        choiceTwo: "choice2",
-        choiceThree: "choice3",
-        choiceFour: "choice4-4"
+        question: "What type of symbol is typically used at the end of a function/statement in JavaScript",
+        choiceOne: "+",
+        choiceTwo: "-",
+        choiceThree: ";",
+        choiceFour: ":"
     },
     questionFive = {
-        question: "question5",
-        choiceOne: "choice1",
-        choiceTwo: "choice2",
-        choiceThree: "choice3",
-        choiceFour: "choice4-5"
+        question: "Why would you use === instead of == in a javscript function",
+        choiceOne: "To make extra sure the answer is correct",
+        choiceTwo: "This is not a real javascript option",
+        choiceThree: "To just make sure its the same value",
+        choiceFour: "To ensure the same type and value"
     },
 ];
 
@@ -229,7 +229,7 @@ function seeAllScores() {
 
 
 // Timer
-var time = 60;
+//var time = 60;
 
 const $timeEl = document.querySelector("#timer");
 

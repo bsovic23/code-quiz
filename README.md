@@ -34,3 +34,6 @@ https://bsovic23.github.io/code-quiz/
 
 ## Screenshots of the Application
 
+![](assets/pictures/Intro.PNG)
+![](assets/pictures/ExampleQuestion.PNG)
+![](assets/pictures/HighScores.PNG)
