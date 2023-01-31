@@ -32,8 +32,11 @@ https://bsovic23.github.io/code-quiz/
 
 * I would like to simplify the code to make it shorter rather than some of the sections that include more code than necessary
 
+* I would like to have the high score list users in order of score
+
 ## Screenshots of the Application
 
+![](assets/pictures/Application.PNG)
 ![](assets/pictures/Intro.PNG)
 ![](assets/pictures/ExampleQuestion.PNG)
 ![](assets/pictures/HighScores.PNG)
